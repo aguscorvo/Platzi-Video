@@ -76,6 +76,7 @@ ul:hover {
   margin-right: 8px;
 }
 
+/* SEARCH BAR */
 .main {
   height: 300px;
 }
@@ -97,4 +98,72 @@ ul:hover {
 
 ::placeholder {
   color: white;
+}
+
+/* CAROUSEL */
+.carousel {
+  width: 100%;
+  padding: 30px;
+  position: relative;
+  overflow: scroll;
+}
+
+.carousel__container {
+  margin: 70px 0;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+.carousel-item {
+  width: 200px;
+  height: 250px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: blueviolet;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.carousel-item__details {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  font-size: 1rem;
+  opacity: 0;
+  transition: 450ms opacity;
+}
+
+.carousel-item__details:hover {
+  opacity: 1;
 }
