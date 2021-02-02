@@ -35,7 +35,7 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 0;
+  padding: 30px 30px;
   min-height: calc(100vh - 200px);
   background: linear-gradient(#21c08b, #ab88ff);
 }
@@ -152,4 +152,19 @@ html {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .login__container {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 10px;
+  }
 }
