@@ -1,21 +1,21 @@
 :root {
-  --primary-color: #ab88ff;
+  --primary-color: #8f57fd;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Muli', sans-serif;
+  color: white;
 }
 
 html {
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
 }
 
 body {
   background-color: var(--primary-color);
-  font-family: 'Muli', sans-serif;
-  color: white;
 }
 
 .header {
@@ -59,6 +59,11 @@ ul:hover {
 
 .header__menu li a {
   text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.header__menu p {
+  font-size: 1.8rem;
 }
 
 .header__menu--profile {
@@ -69,4 +74,27 @@ ul:hover {
 
 .header__menu--profile img {
   margin-right: 8px;
+}
+
+.main {
+  height: 300px;
+}
+
+.main__title {
+  font-size: 2.5rem;
+}
+
+.main__input {
+  height: 50px;
+  padding: 0 20px;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+::placeholder {
+  color: white;
 }
