@@ -1,5 +1,6 @@
 :root {
   --primary-color: #21c08b;
+  --secondary-color: #ab88ff;
   --primary-font-size: 1.4rem;
   --secondary-font-size: 1.6rem;
 }
@@ -140,7 +141,7 @@ html {
   align-items: center;
   height: 100px;
   width: 100%;
-  background-color: #ab88ff;
+  background-color: var(--secondary-color);
 }
 
 .footer a {

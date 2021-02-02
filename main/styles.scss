@@ -1,13 +1,14 @@
-:root {
-  --primary-color: #8f57fd;
-}
+$white: white;
+$primary-color: #8f57fd;
+$primary-font-size: 1.4rem;
+$secondary-font-size: 1.6rem;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Muli', sans-serif;
-  color: white;
+  color: $white;
 }
 
 html {
@@ -15,15 +16,22 @@ html {
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: $primary-color;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+
 }
 
 .header {
+  @extend .flex;
   width: 100%;
   height: 80px;
-  display: flex;
+  // display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
 }
 
 .header__img {
@@ -57,9 +65,14 @@ ul:hover {
   margin: 10px 0px;
 }
 
-.header__menu li a {
+@mixin link{
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: $secondary-font-size;
+  cursor: pointer;
+}
+
+.header__menu li a {
+  @include link;
 }
 
 .header__menu p {
@@ -68,8 +81,7 @@ ul:hover {
 
 .header__menu--profile {
   margin-right: 30px;
-  display: flex;
-  align-items: center;
+  @extend .flex;
 }
 
 .header__menu--profile img {
@@ -97,10 +109,18 @@ ul:hover {
 }
 
 ::placeholder {
-  color: white;
+  color: $white;
 }
 
 /* CAROUSEL */
+
+.categories__title {
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+  font-size:  $secondary-font-size;
+}
+
 .carousel {
   width: 100%;
   padding: 30px;
@@ -166,4 +186,21 @@ ul:hover {
 
 .carousel-item__details:hover {
   opacity: 1;
+}
+
+/* FOOTER */
+.footer {
+  @extend .flex;
+  height: 100px;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.footer a {
+  padding-left: 30px;
+  @include link;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
