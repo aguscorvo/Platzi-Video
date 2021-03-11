@@ -1,15 +1,8 @@
-:root {
-  --primary-color: #21c08b;
-  --secondary-color: #ab88ff;
-  --primary-font-size: 1.4rem;
-  --secondary-font-size: 1.6rem;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   color: white;
 }
 
@@ -17,13 +10,16 @@ html {
   font-size: 62.5%;
 }
 
+.flex, .footer, .signup__container--login, .signup, .header {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   width: 100%;
   height: 100px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: var(--primary-color);
+  background-color: #21c08b;
 }
 
 .header__img {
@@ -32,8 +28,6 @@ html {
 }
 
 .signup {
-  display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 30px 30px;
@@ -63,20 +57,19 @@ html {
 }
 
 .signup__container--form label {
-  font-size: var(--primary-font-size);
+  font-size: 1.4rem;
 }
 
 .signup__container--login {
-  display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 50px;
 }
 
 .signup__container--login a {
-  font-size: var(--primary-font-size);
-  font-weight: bold;
+  font-size: 1.4rem;
   text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .signup__container--login a:hover {
@@ -93,7 +86,7 @@ html {
   border-right: 0;
   border-bottom: 2px solid white;
   outline: none;
-  font-size: var(--secondary-font-size);
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
@@ -107,25 +100,23 @@ html {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  font-size: var(--secondary-font-size);
+  font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 1px;
   margin: 10px 0;
 }
 
 .footer {
-  display: flex;
-  align-items: center;
   height: 100px;
   width: 100%;
-  background-color: var(--secondary-color);
+  background-color: #ab88ff;
 }
 
 .footer a {
   padding-left: 30px;
-  font-size: var(--primary-font-size);
-  cursor: pointer;
+  font-size: 1.4rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .footer a:hover {
@@ -146,3 +137,5 @@ html {
     padding-top: 10px;
   }
 }
+
+/*# sourceMappingURL=registro.css.map */

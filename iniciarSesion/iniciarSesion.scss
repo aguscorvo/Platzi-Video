@@ -1,8 +1,13 @@
+$primary-color: #21c08b;
+$secondary-color: #ab88ff;
+$primary-font-size: 1.4rem;
+$secondary-font-size: 1.6rem;
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   color: white;
 }
 
@@ -10,7 +15,7 @@ html {
   font-size: 62.5%;
 }
 
-.flex, .footer, .login__container--social-media > div, .login, .header {
+.flex{
   display: flex;
   align-items: center;
 }
@@ -18,8 +23,9 @@ html {
 .header {
   width: 100%;
   height: 100px;
+  @extend .flex;
   justify-content: space-between;
-  background-color: #21c08b;
+  background-color: $primary-color;
 }
 
 .header__img {
@@ -28,11 +34,12 @@ html {
 }
 
 .login {
+  @extend .flex;
   justify-content: center;
   flex-direction: column;
   padding: 30px 30px;
   min-height: calc(100vh - 200px);
-  background: linear-gradient(#21c08b, #ab88ff);
+  background: linear-gradient($primary-color, $secondary-color);
 }
 
 .login__container {
@@ -57,7 +64,7 @@ html {
 }
 
 .login__container--form label {
-  font-size: 1.4rem;
+  font-size: $primary-font-size;
 }
 
 .login__container--remember-me {
@@ -66,10 +73,14 @@ html {
   margin-top: 10px;
 }
 
-.login__container--remember-me a {
-  font-size: 1.4rem;
+@mixin link{
+  font-size: $primary-font-size;
   text-decoration: none;
   cursor: pointer;
+}
+
+.login__container--remember-me a {
+  @include link;
 }
 
 .login__container--remember-me a:hover {
@@ -77,8 +88,9 @@ html {
 }
 
 .login__container--social-media > div {
+  @extend .flex;
   margin-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: $primary-font-size;
 }
 
 .login__container--social-media > div > img {
@@ -87,11 +99,11 @@ html {
 }
 
 .login__container--register {
-  font-size: 1.4rem;
+  font-size: $primary-font-size;
 }
 
 .login__container--register a {
-  font-size: 1.6rem;
+  font-size: $secondary-font-size;
   font-weight: bold;
   text-decoration: none;
 }
@@ -110,7 +122,7 @@ html {
   border-right: 0;
   border-bottom: 2px solid white;
   outline: none;
-  font-size: 1.6rem;
+  font-size: $secondary-font-size;
   font-weight: bold;
 }
 
@@ -124,23 +136,22 @@ html {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: $secondary-font-size;
   font-weight: bold;
   letter-spacing: 1px;
   margin: 10px 0;
 }
 
 .footer {
+  @extend .flex;
   height: 100px;
   width: 100%;
-  background-color: #ab88ff;
+  background-color: $secondary-color;
 }
 
 .footer a {
   padding-left: 30px;
-  font-size: 1.4rem;
-  text-decoration: none;
-  cursor: pointer;
+  @include link;
 }
 
 .footer a:hover {
@@ -161,5 +172,3 @@ html {
     padding-top: 10px;
   }
 }
-
-/*# sourceMappingURL=iniciarSesion.css.map */
